@@ -226,17 +226,50 @@ mkdir agent
 cd agent
 Extract agent (use provided command from Azure DevOps UI).
 
+PS C:\> mkdir agent ; cd agent
+
+#  Extract the downloaded agent zip
+PS C:\agent> Add-Type -AssemblyName System.IO.Compression.FileSystem
+[System.IO.Compression.ZipFile]::ExtractToDirectory(
+"$HOME\Downloads\vsts-agent-win-x64-4.270.0.zip", "$PWD")
+
 ------------------------------------------------------------------------------------------
 
 24. Configure Agent
 .\config.cmd
 
-Provide:
+  Configure the agent (answer the prompts)
+PS C:\agent> .\config.cmd
 
+#  Run the agent interactively
+PS C:\agent> .\run.cmd
+
+Provide:
 Server URL
 PAT
 Pool name
 Agent name
+
+Server URL prompt
+Enter: https://dev.azure.com/agwumonica100874
+
+Auth type prompt
+Enter: PAT
+
+PAT prompt
+Paste the token you saved 
+
+Agent pool prompt
+Enter: Default
+
+Agent name prompt
+Enter: agent3
+
+Work folder prompt
+Press Enter to keep default (_work)
+
+ After running .\run.cmd you should see "Listening for Jobs" — agent3 is now online in your Azure DevOps pool.
+
 
 ------------------------------------------------------------------------------------------------------------
 
