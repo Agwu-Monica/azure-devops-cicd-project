@@ -4,7 +4,7 @@ This guide documents the complete process of setting up End-to-end Azure DevOps 
 
 -------------------------------------------------------------------------------------------------------
 
-1. Create Azure DevOps Organization
+## Create Azure DevOps Organization
 Go to https://dev.azure.com
 Sign in with your Microsoft account
 Click New Organization
@@ -15,7 +15,7 @@ Click Create
 
 -----------------------------------------------------------------------------------------
 
-2. Create a New Project
+## Create a New Project
 Inside your organization, click New Project
 Enter:
 Project Name
@@ -24,7 +24,7 @@ Click Create
 
 ---------------------------------------------------------------------------------------------------
 
-3. Create a Repository
+## Create a Repository
 Navigate to Repos
 Click the repository dropdown → New Repository
 Select:
@@ -34,7 +34,7 @@ Click Create
 
 -------------------------------------------------------------------------------------------------------
 
-4. Generate Personal Access Token (PAT)
+## Generate Personal Access Token (PAT)
 Click your profile icon (top right)
 Select Security
 Click Personal Access Tokens
@@ -48,7 +48,7 @@ Copy and store the token securely
 
 -----------------------------------------------------------------------------------------------------------
 
-5. Clone Repository Using MobaXterm
+## Clone Repository Using MobaXterm
 
 Prerequisite
 Ensure Git is installed:
@@ -67,20 +67,20 @@ Password: paste your Personal Access Token (PAT)
 
 ---------------------------------------------------------------------------------------------
 
-6. Configure Git Identity (Important)
+## Configure Git Identity (Important)
 git config --global user.name "Your Name"
 git config --global user.email "your-email@example.com"
 
 ------------------------------------------------------------------------------------------------
 
-7. Verify Repository Locally
+## Verify Repository Locally
 Open File Explorer
 Navigate to the folder where you ran the clone command
 Confirm a new folder with your repository name is created
 
 ---------------------------------------------------------------------------------------------------------
 
-8. Inspect Repository Contents
+## Inspect Repository Contents
 Open the repository folder
 You will see:
 Project files
@@ -89,7 +89,7 @@ A hidden .git folder (used for version control)
 
 -------------------------------------------------------------------------------------------------
 
-9. Check Git Configuration
+## Check Git Configuration
 Open the .git folder
 Locate the config file
 Open it using Notepad or WordPad
@@ -102,7 +102,7 @@ Origin settings
 
 ---------------------------------------------------------------------------------------
 
-10. Open Project in Visual Studio Code
+## Open Project in Visual Studio Code
 Open Visual Studio Code
 Click File → Open Folder
 Select the cloned repository
@@ -110,14 +110,14 @@ Click Open
 
 --------------------------------------------------------------------------------------
 
-11. Verify in VS Code
+## Verify in VS Code
 Confirm files and folders are visible
 Open the Source Control tab
 Ensure the repository is initialized and branch (e.g. main) is visible
 
 ----------------------------------------------------------------------------------------------
 
-12. Create, Commit, and Push Changes
+## Create, Commit, and Push Changes
 Create a test file
 Create a file (e.g. test.txt)
 Add content and save
@@ -128,14 +128,14 @@ git push origin main
 
 ------------------------------------------------------------------------------------------
 
-13. Verify in Azure DevOps
+## Verify in Azure DevOps
 Go back to Azure DevOps
 Navigate to Repos
 Confirm your new file appears in the repository
 
 -----------------------------------------------------------------------------------------
 
-14. Slack Integration (Azure DevOps Notifications)
+## Slack Integration (Azure DevOps Notifications)
 Configure Slack Webhook
 Open Slack
 Create a workspace and channel (e.g. #devops-alerts)
@@ -146,7 +146,7 @@ Copy the webhook URL
 
 -------------------------------------------------------------------------------------------------
 
-15. Configure Azure DevOps Service Hook
+## Configure Azure DevOps Service Hook
 Open Azure DevOps project
 Go to Project Settings → Service Hooks
 Click Create Subscription
@@ -158,7 +158,7 @@ Click Finish
 
 --------------------------------------------------------------------------------------------------
 
-16. Test Slack Integration
+## Test Slack Integration
 git add .
 git commit -m "Testing Slack integration"
 git push origin main
@@ -166,7 +166,7 @@ You should receive a notification in Slack.
 
 ---------------------------------------------------------------------------------------
 
-17. Pipeline Setup
+## Pipeline Setup
 Create Pipeline
 Go to Pipelines
 Click New Pipeline
@@ -176,7 +176,7 @@ Choose Starter pipeline
 
 -----------------------------------------------------------------------------------------
 
-18. Configure YAML Pipeline
+## Configure YAML Pipeline
 trigger:
 - main
 
@@ -189,14 +189,14 @@ steps:
 
 ---------------------------------------------------------------------------------------------
   
-19. Run Pipeline
+## Run Pipeline
 Click Save and Run
 Commit directly to main
 Monitor pipeline execution
 
 --------------------------------------------------------------------------------------
 
-20. Verify Pipeline Execution
+## Verify Pipeline Execution
 Check logs
 Ensure agent picks up the job
 Confirm successful run (green checkmark)
@@ -204,7 +204,7 @@ Self-Hosted Agent Setup (Custom Pool)
 
 ------------------------------------------------------------------------------------------------
 
-21. Create Agent Pool
+## Create Agent Pool
 Go to Project Settings → Agent Pools
 Click Add Pool
 Select Self-hosted
@@ -213,7 +213,12 @@ Click Create
 
 --------------------------------------------------------------------------------------------------
 
-22. Download Agent
+
+<img width="960" height="531" alt="azure devop lab 01" src="https://github.com/user-attachments/assets/99c6a681-d7f1-48a5-9b2d-a1884cd23bf7" />
+
+---------------------------------------------------------------------------------------------------
+
+## Download Agent
 Open your agent pool
 Click New Agent
 Select Windows
@@ -221,7 +226,7 @@ Download the .zip file
 
 -----------------------------------------------------------------------------------------------
 
-23. Install Agent (PowerShell - Admin)
+## Install Agent (PowerShell - Admin)
 mkdir agent
 cd agent
 Extract agent (use provided command from Azure DevOps UI).
@@ -235,7 +240,7 @@ PS C:\agent> Add-Type -AssemblyName System.IO.Compression.FileSystem
 
 ------------------------------------------------------------------------------------------
 
-24. Configure Agent
+## Configure Agent
 .\config.cmd
 
   Configure the agent (answer the prompts)
@@ -273,21 +278,21 @@ Press Enter to keep default (_work)
 
 ------------------------------------------------------------------------------------------------------------
 
-25. Run Agent as Service
+## Run Agent as Service
 Choose Y to run as service
 Use default system account
 Allow auto-start
 
 -------------------------------------------------------------------------------------------
 
-26. Verify Agent
+## Verify Agent
 Go to Azure DevOps
 Open Agent Pool
 Confirm agent status is Online
 
 ----------------------------------------------------------------------------------------------
 
-Key Concepts Demonstrated
+## Key Concepts Demonstrated
 Version Control using Git
 Azure DevOps project and repository management
 Secure authentication using PAT
@@ -298,7 +303,7 @@ Event-driven DevOps workflow
 
 ---------------------------------------------------------------------------------------------------
 
-Conclusion
+## Conclusion
 This project demonstrates a complete DevOps pipeline from code management to automation and notifications, simulating a real-world CI/CD environment.
 
 --------------------------------------------------------------------------------------------------
@@ -307,8 +312,9 @@ https://github.com/user-attachments/assets/2bf1f392-4a74-452a-9a44-af235bcdc3f2
 
 -----------------------------------------------------------------------------------------------------
 
-👨‍💻 Author
-Monica
+## Author
+
+Monica Agwu
 
 *Cloud Engineering & DevOps
 
