@@ -228,7 +228,7 @@ Extract agent (use provided command from Azure DevOps UI).
 
 PS C:\> mkdir agent ; cd agent
 
-#  Extract the downloaded agent zip
+ Extract the downloaded agent zip
 PS C:\agent> Add-Type -AssemblyName System.IO.Compression.FileSystem
 [System.IO.Compression.ZipFile]::ExtractToDirectory(
 "$HOME\Downloads\vsts-agent-win-x64-4.270.0.zip", "$PWD")
@@ -241,7 +241,7 @@ PS C:\agent> Add-Type -AssemblyName System.IO.Compression.FileSystem
   Configure the agent (answer the prompts)
 PS C:\agent> .\config.cmd
 
-#  Run the agent interactively
+ Run the agent interactively
 PS C:\agent> .\run.cmd
 
 Provide:
@@ -302,6 +302,10 @@ Conclusion
 This project demonstrates a complete DevOps pipeline from code management to automation and notifications, simulating a real-world CI/CD environment.
 
 --------------------------------------------------------------------------------------------------
+
+https://github.com/user-attachments/assets/2bf1f392-4a74-452a-9a44-af235bcdc3f2
+
+-----------------------------------------------------------------------------------------------------
 
 👨‍💻 Author
 Monica
