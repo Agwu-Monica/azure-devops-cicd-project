@@ -267,3 +267,12 @@ Event-driven DevOps workflow
 
 Conclusion
 This project demonstrates a complete DevOps pipeline from code management to automation and notifications, simulating a real-world CI/CD environment.
+
+--------------------------------------------------------------------------------------------------
+
+👨‍💻 Author
+Monica
+
+*Cloud Engineering & DevOps
+
+https://www.linkedin.com/in/agwumonica/
