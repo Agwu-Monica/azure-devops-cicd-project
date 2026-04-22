@@ -312,6 +312,11 @@ https://github.com/user-attachments/assets/2bf1f392-4a74-452a-9a44-af235bcdc3f2
 
 -----------------------------------------------------------------------------------------------------
 
+## Notion Link
+https://swamp-diadem-74c.notion.site/DEVOPS-AND-GIT-PROJECT-33b5e80cc235802d9b56f9e92a057ee3?source=copy_link
+
+---------------------------------------------------------------------------------------------------------------
+
 ## Author
 
 Monica Agwu
